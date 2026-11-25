@@ -1,0 +1,6 @@
+# Interdire l'exécution de scripts dans le dossier des images
+Options -Indexes
+<FilesMatch "\.(php|phtml|phar|cgi|pl|py|sh)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" rx="14" fill="#e9f7f8"/>
+  <circle cx="150" cy="74" r="46" fill="#fff" opacity=".65"/>
+  <g transform="translate(126 50)" fill="none" stroke="#00838f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21s-7-4-7-10a4 4 0 018-2 4 4 0 018 2c0 6-7 10-7 10z"/>
+  </g>
+  <text x="150" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#222">Beauté &amp; Santé</text>
+</svg>

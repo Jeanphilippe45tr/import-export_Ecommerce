@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <rect width="300" height="200" rx="14" fill="#fdecea"/>
+  <circle cx="150" cy="74" r="46" fill="#fff" opacity=".65"/>
+  <g transform="translate(126 50)" fill="none" stroke="#c62828" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 8l8-4 8 4-2 12H6zM9 20v-7h6v7"/>
+  </g>
+  <text x="150" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#222">Vêtement</text>
+</svg>

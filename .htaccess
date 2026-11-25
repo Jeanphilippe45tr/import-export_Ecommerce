@@ -1,0 +1,65 @@
+# -----------------------------------------------------------------------------
+# EuroImport Export — .htaccess (Apache, installation dans /import-export)
+# -----------------------------------------------------------------------------
+
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+
+# -----------------------------------------------------------------------------
+# Protection des dossiers sensibles (le dossier api/ doit rester accessible)
+# -----------------------------------------------------------------------------
+RewriteRule ^(config|includes|vendor|admin/includes)($|/) - [F,L]
+RewriteRule ^uploads/(\.|.*\.(php|phtml|phar|cgi|pl|sh))$ - [F,L]
+
+# -----------------------------------------------------------------------------
+# Sitemap et robots
+# -----------------------------------------------------------------------------
+RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
+RewriteRule ^robots\.txt$ robots.txt [L]
+
+# -----------------------------------------------------------------------------
+# Pages publiques : le code se trouve dans public/
+# -----------------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^catalogue/?$ public/catalogue.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^produit/([a-z0-9-]+)/?$ public/produit.php?slug=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^recherche/?$ public/recherche.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(mentions-legales|cgv|politique-confidentialite|livraison-douane|retours-retractation|faq|a-propos|contact)/?$ public/pages.php?slug=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(mentions-legales|cgv|politique-confidentialite|livraison-douane|retours-retractation|faq|a-propos|contact)\.php$ public/pages.php?slug=$1 [QSA,L]
+
+# Toutes les autres pages .php demandées à la racine (panier.php, compte.php…)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)\.php$ public/$1.php [QSA,L]
+
+# -----------------------------------------------------------------------------
+# En-têtes de sécurité
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# PHP (valeurs indicatives, selon l'hébergeur)
+# -----------------------------------------------------------------------------
+<IfModule mod_php.c>
+    php_value upload_max_filesize 8M
+    php_value post_max_size 12M
+    php_value max_execution_time 30
+</IfModule>

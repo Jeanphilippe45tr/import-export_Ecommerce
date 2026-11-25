@@ -1,0 +1,4 @@
+# Espace admin : l'accès est protégé par l'authentification PHP (session).
+# Aucun fichier sensible n'est accessible directement en dehors de l'application.
+
+Options -Indexes

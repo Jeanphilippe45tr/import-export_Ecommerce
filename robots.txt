@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Dossiers et fichiers sensibles interdits aux robots
+Disallow: /admin/
+Disallow: /api/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /uploads/
+Disallow: /public/assets/
+
+# URLs à ne pas indexer
+Disallow: /panier.php
+Disallow: /commande.php
+Disallow: /commande-confirmation.php
+Disallow: /connexion.php
+Disallow: /inscription.php
+Disallow: /compte.php
+Disallow: /mot-de-passe-oublie.php
+Disallow: /reset-password.php
+
+# Sitemap
+Sitemap: https://www.euroimport-export.fr/sitemap.xml

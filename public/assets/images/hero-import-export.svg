@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" role="img" aria-label="Commerce international : globe, avion et cargo">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4e8"/>
+      <stop offset="1" stop-color="#ffe0bd"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b3a57"/>
+      <stop offset="1" stop-color="#0d2438"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9a3c"/>
+      <stop offset="1" stop-color="#e65100"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="460" rx="22" fill="url(#sky)"/>
+  <circle cx="520" cy="88" r="38" fill="#fff" opacity=".55"/>
+
+  <!-- Route points -->
+  <path d="M92 132 Q 250 40 430 128" fill="none" stroke="#ff6600" stroke-width="2.5" stroke-dasharray="7 8" opacity=".8"/>
+  <circle cx="92" cy="132" r="7" fill="#ff6600"/>
+  <circle cx="430" cy="128" r="7" fill="#ff6600"/>
+
+  <!-- Globe -->
+  <g transform="translate(320 176)">
+    <circle r="86" fill="url(#globe)"/>
+    <g fill="none" stroke="#fff" stroke-width="2" opacity=".9">
+      <ellipse rx="34" ry="86"/>
+      <ellipse rx="62" ry="86"/>
+      <line x1="-86" y1="0" x2="86" y2="0"/>
+      <path d="M-80 -34 Q0 -8 80 -34M-80 34 Q0 8 80 34"/>
+    </g>
+    <path d="M-52 -54l22 8 10 24 26 6 12 22-18 16-30-6-14 24-18-12 8-28-18-18z" fill="#fff" opacity=".18"/>
+  </g>
+
+  <!-- Plane -->
+  <g transform="translate(452 92) rotate(18)">
+    <path d="M0 0 L58 -8 L44 2 L62 12 L4 8 L-4 26 L-12 26 L-8 6 L-30 10 L-34 4 L-10 -6z" fill="#0f0f0f"/>
+  </g>
+
+  <!-- Sea -->
+  <path d="M0 320 Q160 296 320 320 T640 316 L640 460 L0 460z" fill="url(#sea)"/>
+  <g stroke="#ffffff" stroke-width="2" opacity=".18" fill="none">
+    <path d="M40 370q30 -10 60 0t60 0M420 392q30 -10 60 0t60 0M180 420q30 -10 60 0t60 0"/>
+  </g>
+
+  <!-- Cargo ship -->
+  <g transform="translate(112 286)">
+    <path d="M0 52 L420 52 L384 108 L44 108z" fill="#f5f5f5"/>
+    <path d="M0 52 L420 52 L412 66 L8 66z" fill="#ff6600"/>
+    <g>
+      <rect x="52" y="8" width="62" height="44" rx="3" fill="#e53935"/>
+      <rect x="120" y="8" width="62" height="44" rx="3" fill="#1565c0"/>
+      <rect x="188" y="8" width="62" height="44" rx="3" fill="#2e7d32"/>
+      <rect x="256" y="8" width="62" height="44" rx="3" fill="#f9a825"/>
+      <rect x="86" y="-36" width="62" height="44" rx="3" fill="#6a1b9a"/>
+      <rect x="154" y="-36" width="62" height="44" rx="3" fill="#00838f"/>
+      <rect x="222" y="-36" width="62" height="44" rx="3" fill="#ef6c00"/>
+      <g stroke="#fff" stroke-width="1.5" opacity=".5">
+        <path d="M64 8v44M76 8v44M102 8v44M132 8v44M144 8v44M170 8v44M200 8v44M212 8v44M238 8v44M268 8v44M280 8v44M306 8v44M98 -36v44M110 -36v44M136 -36v44M166 -36v44M178 -36v44M204 -36v44M234 -36v44M246 -36v44M272 -36v44"/>
+      </g>
+    </g>
+    <rect x="344" y="10" width="52" height="42" rx="3" fill="#ffffff"/>
+    <rect x="352" y="18" width="14" height="12" fill="#1565c0"/>
+    <rect x="372" y="18" width="14" height="12" fill="#1565c0"/>
+    <rect x="352" y="34" width="14" height="12" fill="#1565c0"/>
+    <rect x="372" y="34" width="14" height="12" fill="#1565c0"/>
+  </g>
+
+  <!-- Package accent -->
+  <g transform="translate(540 300)">
+    <path d="M0 26 L34 8 L68 26 L68 62 L34 80 L0 62z" fill="#ffb066"/>
+    <path d="M0 26 L34 44 L68 26M34 44v36" fill="none" stroke="#fff" stroke-width="2.5"/>
+  </g>
+</svg>
